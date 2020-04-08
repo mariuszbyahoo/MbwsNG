@@ -41,7 +41,7 @@
                             [style.margin.px]='imageMargin' />
                     </td>
                     <td>{{ post.title }}</td>
-                    <td>{{ post.publicationDate }}</td>
+                    <td>{{ post.publicationDate | date : 'fullDate' }}</td>
                     <td>{{ post.content }}</td>
                 </tr>
             </tbody>
