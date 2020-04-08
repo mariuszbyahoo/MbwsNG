@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'ws-root',
   template: `
     <div><h1>{{pageTitle}}</h1>
-      <div>My First Component</div>
+      <ws-posts></ws-posts>
     </div>  
     `
 })
