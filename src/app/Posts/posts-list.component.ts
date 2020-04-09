@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { IPost } from './post';
 
 @Component({
     selector: 'ws-posts',
@@ -11,24 +12,24 @@ export class PostsListComponent{
     imageMargin: number = 2;
     showImage: boolean = false;
     listFilter: string = 'Lorem';
-    posts: any[] = [
+    posts: IPost[] = [
         {
-            "title":"Lorem Ipsum",
-            "publicationDate":"03-01-2020",
-            "content":"Dolor Samet Et Cetera",
-            "imageUrl": "assets/images/lorem-ipsum.png"
+            title:"Lorem Ipsum",
+            publicationDate: "09-20-2019",
+            content:"Dolor Samet Et Cetera",
+            imageUrl: "assets/images/lorem-ipsum.png"
         },
         {
-            "title":"Jaś Kowalski",
-            "publicationDate":"03-01-2000",
-            "content":"Ma dwadzieścia lat i lubi grać w piłkę",
-            "imageUrl": "assets/images/boy.jpeg"
+            title:"Jaś Kowalski",
+            publicationDate:"01-03-1999",
+            content:"Ma dwadzieścia jeden lat i lubi grać w piłkę",
+            imageUrl: "assets/images/boy.jpeg"
         },
         {
-            "title":"Ania Nowak",
-            "publicationDate":"03-01-2000",
-            "content":"Ma dwadzieścia lat i lubi tańczyć salsę",
-            "imageUrl": "assets/images/girl.jpeg"
+            title:"Ania Nowak",
+            publicationDate:"01-03-2001",
+            content:"Ma dziewiętnaście lat i lubi tańczyć salsę",
+            imageUrl: "assets/images/girl.jpeg"
         }
     ]; 
 
