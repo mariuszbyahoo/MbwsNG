@@ -3,7 +3,8 @@ import { IPost } from './post';
 
 @Component({
     selector: 'ws-posts',
-    templateUrl: './posts-list.component.html'
+    templateUrl: './posts-list.component.html',
+    styleUrls: ['./posts-list-component.css']
 })
 
 export class PostsListComponent{
