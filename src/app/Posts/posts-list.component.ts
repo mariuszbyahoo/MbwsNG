@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { IPost } from './post';
 
 @Component({
@@ -7,7 +7,7 @@ import { IPost } from './post';
     styleUrls: ['./posts-list-component.css']
 })
 
-export class PostsListComponent{
+export class PostsListComponent implements OnInit{
     pageTitle: string = 'Posts List';
     imageWidth: number = 50;
     imageMargin: number = 2;
@@ -36,5 +36,9 @@ export class PostsListComponent{
 
     toggleImage(): void{
         this.showImage = !this.showImage;
+    }
+
+    ngOnInit(): void {
+        console.log("Posts list component initialized");
     }
 }
