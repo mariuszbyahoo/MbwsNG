@@ -12,7 +12,15 @@ export class PostsListComponent implements OnInit{
     imageWidth: number = 50;
     imageMargin: number = 2;
     showImage: boolean = false;
-    listFilter: string = 'Lorem';
+    _listFilter: string ;
+    get listFilter() : string{
+        return this._listFilter;
+    }
+    set listFilter(value:string){
+        this._listFilter = value;
+        this.filteredPosts = this.listFilter ? this.performFilter(this.listFilter) : this.posts;
+    }
+    filteredPosts: IPost[];
     posts: IPost[] = [
         {
             title:"Lorem Ipsum",
@@ -33,6 +41,17 @@ export class PostsListComponent implements OnInit{
             imageUrl: "assets/images/girl.jpeg"
         }
     ]; 
+
+    constructor(){
+        this.filteredPosts = this.posts;
+        this.listFilter = '';
+    }
+
+    performFilter(filterBy: string): IPost[] {
+        filterBy = filterBy.toLocaleLowerCase();
+        return this.posts.filter((post: IPost) => 
+            post.title.toLocaleLowerCase().indexOf(filterBy) !== -1);
+    }
 
     toggleImage(): void{
         this.showImage = !this.showImage;
