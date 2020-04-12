@@ -29,6 +29,7 @@
                     <th>Title</th>
                     <th>Publication Date</th>
                     <th>Content</th>
+                    <th>Rating</th>
                 </tr>
             </thead>
             <tbody>
@@ -43,6 +44,7 @@
                     <td>{{ post.title }}</td>
                     <td>{{ post.publicationDate | date : 'fullDate' }}</td>
                     <td>{{ post.content }}</td>
+                    <td>{{ post.rating }}</td>
                 </tr>
             </tbody>
         </table>

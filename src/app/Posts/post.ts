@@ -3,4 +3,5 @@ export interface IPost {
     publicationDate: string;
     content: string;
     imageUrl: string;
+    rating: number;
 }
