@@ -6,6 +6,7 @@ import { IPost } from './post';
 })
 export class PostService {
     getProducts(): IPost[] {
+        console.log('getProducts Invoked!');
         return [
             {
                 title:"Lorem Ipsum",
