@@ -14,6 +14,7 @@ export class PostsListComponent implements OnInit{
     imageWidth: number = 50;
     imageMargin: number = 2;
     showImage: boolean = false;
+    errMsg: string;
     _listFilter: string ;
     get listFilter() : string{
         return this._listFilter;
@@ -40,8 +41,13 @@ export class PostsListComponent implements OnInit{
     }
 
     ngOnInit(): void {
-        this.posts = this.postService.getProducts();
-        this.filteredPosts = this.posts;
+        this.postService.getProducts().subscribe({
+            next: posts => {
+                this.posts = posts
+                this.filteredPosts = this.posts;
+            },
+            error: err => this.errMsg = err
+        });
         console.log("Posts list component initialized");
     }
 

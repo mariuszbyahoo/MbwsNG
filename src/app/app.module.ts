@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PostsListComponent } from './Posts/posts-list.component';
 import { CommonModule } from '@angular/common';
 import { StarComponent } from './Stars/star.component';
+import { HttpClientModule } from '@angular/common/http'; 
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { StarComponent } from './Stars/star.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
