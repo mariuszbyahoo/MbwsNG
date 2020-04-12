@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostsListComponent } from './Posts/posts-list.component';
 import { CommonModule } from '@angular/common';
+import { StarComponent } from './Stars/star.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsListComponent,
+    StarComponent
   ],
   imports: [
     BrowserModule,
