@@ -44,7 +44,7 @@
                     <td>{{ post.title }}</td>
                     <td>{{ post.publicationDate | date : 'fullDate' }}</td>
                     <td>{{ post.content }}</td>
-                    <td><ws-star></ws-star></td>
+                    <td><ws-star [rating]='post.rating'></ws-star></td>
                 </tr>
             </tbody>
         </table>

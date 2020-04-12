@@ -1,3 +1,4 @@
-body {
+.crop {
+    overflow: hidden;  
     color: goldenrod;
 }
