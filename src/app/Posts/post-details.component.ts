@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { IPost } from './post';
 import { PostService } from './post.service';
 
@@ -12,7 +12,7 @@ export class PostDetailsComponent implements OnInit {
   post: IPost;
   errMsg: string;
 
-  constructor(private route: ActivatedRoute, private postSrv: PostService) { }
+  constructor(private route: ActivatedRoute, private postSrv: PostService, private router: Router) { }
 
   ngOnInit(): void {
     this.postSrv.getPost(this.route.snapshot.paramMap.get('id')).subscribe({
@@ -25,5 +25,7 @@ export class PostDetailsComponent implements OnInit {
     });
     console.log('Specific Post has been initialized');
   }
-
+  onBack(): void{
+    this.router.navigate(['/posts']);
+  }
 }
