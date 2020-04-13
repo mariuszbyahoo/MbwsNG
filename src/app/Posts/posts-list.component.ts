@@ -3,7 +3,6 @@ import { IPost } from './post';
 import { PostService } from './post.service';
 
 @Component({
-    selector: 'ws-posts',
     templateUrl: './posts-list.component.html',
     styleUrls: ['./posts-list-component.css'],
     providers: [PostService]
