@@ -27,10 +27,10 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     RouterModule.forRoot([
       {path: 'posts', component: PostsListComponent},
-      {path: 'posts:id', component: PostDetailsComponent},
+      {path: 'posts/:id', component: PostDetailsComponent},
       {path: 'welcome', component: WelcomeComponent},
       {path: '', redirectTo: 'welcome', pathMatch: 'full'},
-      {path: '**', redirectTo: 'welcome', pathMatch: 'full'} // This path casually is being used for error sites.
+      //{path: '**', redirectTo: 'welcome', pathMatch: 'full'} // This path casually is being used for error sites.
     ], {useHash: true})
   ],
   providers: [],

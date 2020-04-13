@@ -41,7 +41,9 @@
                             [style.width.px]='imageWidth'
                             [style.margin.px]='imageMargin' />
                     </td>
-                    <td>{{ post.title }}</td>
+                    <td>
+                        <a [routerLink]="['/posts', post.id]">{{ post.title }}</a>
+                    </td>
                     <td>{{ post.publicationDate | date : 'fullDate' }}</td>
                     <td>{{ post.content }}</td>
                     <td><ws-star [rating]='post.rating'
