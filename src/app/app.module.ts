@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { PostsListComponent } from './Posts/posts-list.component';
 import { CommonModule } from '@angular/common';
 import { StarComponent } from './Stars/star.component';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
+import { PostDetailsComponent } from './Posts/post-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsListComponent,
-    StarComponent
+    StarComponent,
+    PostDetailsComponent
   ],
   imports: [
     BrowserModule,
