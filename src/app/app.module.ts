@@ -9,6 +9,7 @@ import { StarComponent } from './Stars/star.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostDetailsComponent } from './Posts/post-details.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,14 @@ import { WelcomeComponent } from './welcome/welcome.component';
     AppRoutingModule,
     FormsModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([
+      {path: 'posts', component: PostsListComponent},
+      {path: 'posts:id', component: PostDetailsComponent},
+      {path: 'welcome', component: WelcomeComponent},
+      {path: '', redirectTo: 'welcome', pathMatch: 'full'},
+      {path: '**', redirectTo: 'welcome', pathMatch: 'full'} // This path casually is being used for error sites.
+    ], {useHash: true})
   ],
   providers: [],
   bootstrap: [AppComponent]
