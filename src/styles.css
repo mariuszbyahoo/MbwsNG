@@ -10,12 +10,6 @@ div.card-header {
   margin: 5px
 }
 
-.postDetails {
-  float: left;
-  overflow: hidden;
-  clear: right;
-}
-
 .card {
   margin-top: 10px
 }
@@ -24,11 +18,13 @@ div.card-header {
   margin-top: 10px
 }
 
+.container {
+  margin: 10px;
+}
+
 img.detailedPageImage {
   float: right;
-  overflow: hidden;
-  clear: left;
-  margin: 10px;
+  margin: 5px;
   max-width: 500px;
   max-height: 250px;
 }
