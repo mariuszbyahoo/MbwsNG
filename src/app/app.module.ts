@@ -8,13 +8,15 @@ import { CommonModule } from '@angular/common';
 import { StarComponent } from './Stars/star.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostDetailsComponent } from './Posts/post-details.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsListComponent,
     StarComponent,
-    PostDetailsComponent
+    PostDetailsComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
