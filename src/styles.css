@@ -2,25 +2,22 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.min.css";
 
+/*div.container {
+  margin: 20px; Akurat po wykasowaniu tej linijki konterer wróci do centrum dokumentu, ale nie zmieni
+  się jego szerokość
+}*/
+
 div.card-header {
-  font-size: larger;
-}
-.card-title {
-  font-size: larger;
-  margin: 5px
-}
-
-.card {
-  margin-top: 10px
-}
-   
-.table {
-  margin-top: 10px
-}
-
-.container {
-  margin: 10px;
-}
+  font-size: large;
+ }
+ 
+ div.card {
+   margin-top: 10px;
+ }
+ 
+ .table {
+   margin-top: 10px
+ }
 
 img.detailedPageImage {
   float: right;
